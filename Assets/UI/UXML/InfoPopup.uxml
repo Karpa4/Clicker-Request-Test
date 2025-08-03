@@ -1,0 +1,10 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/Styles/InfoPopup.uss?fileID=7433441132597879392&amp;guid=123860341fa2e2f4b803f58dd152dbd4&amp;type=3#InfoPopup" />
+    <ui:VisualElement class="popup">
+        <ui:Label name="PopupTitle" class="popup-title" />
+        <ui:ScrollView horizontal-scroller-visibility="Hidden" class="popup-scroll">
+            <ui:Label name="PopupDescription" text="Description" class="popup-description" />
+        </ui:ScrollView>
+        <ui:Button name="CloseButton" text="Close" class="popup-close" />
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,4 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/Styles/PopupContainer.uss?fileID=7433441132597879392&amp;guid=86d3fc69f87cab845b927c66aaf74d2f&amp;type=3#PopupContainer" />
+    <ui:VisualElement name="MainContent" class="main-content" />
+</ui:UXML>

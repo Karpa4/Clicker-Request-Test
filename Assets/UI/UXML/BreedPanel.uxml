@@ -1,0 +1,7 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/Styles/BreedPanel.uss?fileID=7433441132597879392&amp;guid=7736c6e0d5d2bca4d936ef6d9e32f72f&amp;type=3#BreedPanel" />
+    <ui:VisualElement class="breed-container">
+        <ui:VisualElement name="PanelLoader" class="panel-loader" />
+        <ui:ScrollView name="BreedList" class="breed-list" />
+    </ui:VisualElement>
+</ui:UXML>

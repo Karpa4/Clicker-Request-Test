@@ -1,0 +1,17 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/Styles/ClickerPanel.uss?fileID=7433441132597879392&amp;guid=165629da205025543acad54023c27d77&amp;type=3#ClickerPanel" />
+    <ui:VisualElement class="clicker-container">
+        <ui:VisualElement class="counters-panel">
+            <ui:VisualElement class="currency-container">
+                <ui:Label text="Валюта: " class="counter-label" />
+                <ui:Label name="CurrencyLabel" text="0" class="counter-value" />
+            </ui:VisualElement>
+            <ui:VisualElement class="energy-container">
+                <ui:Label text="Энергия: " class="counter-label" />
+                <ui:Label name="EnergyLabel" text="0" class="counter-value" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:Button name="ClickButton" text="Клик!" class="click-button" />
+    </ui:VisualElement>
+    <ui:VisualElement name="EffectContainer" picking-mode="Ignore" style="position: absolute; left: 0; top: 0; right: 0; bottom: 0;" />
+</ui:UXML>

@@ -1,0 +1,11 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/Styles/MainWindow.uss?fileID=7433441132597879392&amp;guid=4fd680a38d564e74fabefbaf90e585a8&amp;type=3#MainWindow" />
+    <ui:VisualElement class="main-container">
+        <ui:VisualElement name="TabsContainer" class="tabs-container" />
+        <ui:VisualElement class="bottom-nav">
+            <ui:Button name="ClickerBtn" text="Кликер" class="nav-button" />
+            <ui:Button name="WeatherBtn" text="Погода" class="nav-button" />
+            <ui:Button name="BreedButton" text="Породы" class="nav-button" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

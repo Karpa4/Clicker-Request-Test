@@ -1,0 +1,7 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/Styles/WeatherPanel.uss?fileID=7433441132597879392&amp;guid=addc6e148f651a349856cff6b87a7847&amp;type=3#WeatherPanel" />
+    <ui:VisualElement class="weather-container" style="flex-direction: row;">
+        <ui:VisualElement name="WeatherIcon" class="weather-icon" />
+        <ui:Label name="WeatherLabel" text="Сегодня - Ожидание..." class="weather-label" />
+    </ui:VisualElement>
+</ui:UXML>

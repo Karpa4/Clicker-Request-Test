@@ -7,6 +7,7 @@ using Zenject;
 public class ApplicationStart : MonoBehaviour
 {
     [Inject] private IMonoUpdatingService _monoUpdatingService;
+    [Inject] private IUiSoundsManager _soundsManager;
     [Inject] private IEnergyService _energyService;
     [Inject] private IGameCurrencyService _gameCurrencyService;
     [Inject] private IViewManager _viewManager;
@@ -15,6 +16,7 @@ public class ApplicationStart : MonoBehaviour
     private void Awake()
     {
         _monoUpdatingService.Start();
+        _soundsManager.Initialize();
         _energyService.Start();
         _gameCurrencyService.Start();
         _popupService.Initialize();

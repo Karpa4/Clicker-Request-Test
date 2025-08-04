@@ -46,7 +46,8 @@ namespace UI
             if (_activeButtonIndex >= 0 && _activeButtonIndex < _navigationButtons.Count)
             {
                 _panelInfos[_activeButtonIndex].panel.Deactivate();
-                _navigationButtons[_activeButtonIndex].RemoveFromClassList("active-tab");
+                _navigationButtons[_activeButtonIndex].RemoveFromClassList("nav-button-active");
+                _navigationButtons[_activeButtonIndex].AddToClassList("nav-button");
             }
 
             _activeButtonIndex = tabIndex;
@@ -55,7 +56,8 @@ namespace UI
             newPanelInfo.virtualTreeAsset.CloneTree(_tabContent);
             newPanelInfo.panel.Initialize(_uiDocument);
             newPanelInfo.panel.Activate();
-            _navigationButtons[_activeButtonIndex].AddToClassList("active-tab");
+            _navigationButtons[_activeButtonIndex].RemoveFromClassList("nav-button");
+            _navigationButtons[_activeButtonIndex].AddToClassList("nav-button-active");
         }
         
         [Serializable]

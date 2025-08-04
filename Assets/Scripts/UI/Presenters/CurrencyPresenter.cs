@@ -1,3 +1,5 @@
+using Configuration;
+using Services;
 using Services.Clicker;
 using UnityEngine.UIElements;
 
@@ -6,14 +8,16 @@ namespace UI.Presenters
     public class CurrencyPresenter : PresenterBase
     {
         private readonly IGameCurrencyService _gameCurrencyService;
+        private readonly IUiSoundsManager _soundsManager;
         private readonly ClickEffectHandler _clickEffectHandler;
         private readonly Label _currencyLabel;
         private readonly Button _clickButton;
 
-        public CurrencyPresenter(IGameCurrencyService gameCurrencyService, ClickEffectHandler clickEffectHandler, Label currencyLabel, Button clickButton)
+        public CurrencyPresenter(IGameCurrencyService gameCurrencyService, ClickEffectHandler clickEffectHandler,IUiSoundsManager soundsManager, Label currencyLabel, Button clickButton)
         {
             _gameCurrencyService = gameCurrencyService;
             _clickEffectHandler = clickEffectHandler;
+            _soundsManager = soundsManager;
             _currencyLabel = currencyLabel;
             _clickButton = clickButton;
         }
@@ -39,6 +43,7 @@ namespace UI.Presenters
         
         private void UpdateUI(int delta)
         {
+            _soundsManager.PlayOneShot(UiSoundEffectType.CurrencyAdded);
             _clickEffectHandler.ShowUIEffects(delta);
             _currencyLabel.text = _gameCurrencyService.CurrentCurrency.ToString();
         }

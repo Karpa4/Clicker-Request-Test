@@ -5605,6 +5605,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _clickerGameSettings: {fileID: 11400000, guid: f21ef935ec0503142b53908de3d6f3bf, type: 2}
+  _soundManagerConfiguration: {fileID: 11400000, guid: bc9a3baa7cef62c41878128e98fed7d4, type: 2}
   _weatherSettings: {fileID: 11400000, guid: 3ace12ad2e16d414099b71fd8f126ba7, type: 2}
   _dogSettings: {fileID: 11400000, guid: a1a508670c986284e9b6c98e4119cbe2, type: 2}
   _monoUpdatingService: {fileID: 1111432275}

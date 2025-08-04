@@ -1,3 +1,4 @@
+using Services;
 using Services.Clicker;
 using UI.Presenters;
 using UnityEngine;
@@ -11,6 +12,7 @@ namespace UI
         [SerializeField] private ClickEffectHandler _clickEffectHandler;
         
         [Inject] private IEnergyService _energyService;
+        [Inject] private IUiSoundsManager _soundsManager;
         [Inject] private IGameCurrencyService _gameCurrencyService;
         
         public override void Initialize(UIDocument uiDocument)
@@ -23,7 +25,7 @@ namespace UI
         {
             var currencyLabel = uiDocument.rootVisualElement.Q<Label>("CurrencyLabel");
             var clickButton = uiDocument.rootVisualElement.Q<Button>("ClickButton");
-            return new CurrencyPresenter(_gameCurrencyService, _clickEffectHandler, currencyLabel, clickButton);
+            return new CurrencyPresenter(_gameCurrencyService, _clickEffectHandler, _soundsManager, currencyLabel, clickButton);
         }
         
         private PresenterBase CreateEnergyPresenter(UIDocument uiDocument)
